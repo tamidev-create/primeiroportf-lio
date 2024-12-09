@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABALHO</title>
+    <style>
+         /* Definindo a fonte padrão da página */
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Removendo a margem padrão do corpo */
+        body {
+            margin: 0;
+        }
+         /* Estilo do cabeçalho da página */
+        header {
+            background-color: #5f5f5f;
+            padding: 10px;
+        }
+         /* Estilização do título do cabeçalho */
+        header h1 {
+            color: black;
+            margin: 0;
+        }
+         /* Estilo para o menu de navegação */
+        .menu {
+            display: flex; /* Alinha os itens lado a lado */
+            justify-content: center;/* Centraliza os itens */
+            gap: 20px;/* Espaçamento entre os links */
+            background-color: #eee;/* Cor de fundo clara */
+            padding: 10px 0;/* Arredonda os cantos */
+        }
+        .menu a {
+            text-decoration: none;
+            padding: 12px 16px;
+            color: #000;
+            border-radius: 5px;
+        }
+         /* Efeito de hover nos links */
+        .menu a:hover {
+            background-color: #b3aeae;
+            color: #111;
+        }
+         /* Esondendo e adicionando espaçamento */
+        .section {
+            display: none;
+            padding: 20px;
+        }
+         /* Tornando a sessão visível */
+        .section.active {
+            display: block;
+        }
+         /* Centralizando o título e add espaço */
+        .section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+         /* Estilizando o parágrafo com largura, centralizando, espaçamento, cor e justificando */
+        .section p {
+            width: 50%;
+            margin: 0 auto;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+        }
+         /* Estilo diferenciado no último paráfrafo */
+        .section p:last-child {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .imagem-1 {
+            width: 200px; /* Tamanho da imagem */
+            height: auto; /* Mantém a proporção */
+            float: left; /* Faz a imagem "flutuar" ao lado do texto */
+            margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+            border-radius: 8px; /* Arredonda os cantos da imagem (opcional) */
+        }
+        /* Estiliza a seção de contato */
+#contato {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+ /* Centralizando e add espaçamento */
+#contato h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ /* Centralizando o paráfrago, com espaçamento e cor  */
+#contato p {
+  text-align: center;/* Centraliza o texto */
+  margin-bottom: 20px;/* Adiciona espaçamento abaixo */
+  color: #555;/* Define a cor do texto */
+}
+
+/* Formulário */
+.form-contato {
+  display: flex; /* Organiza os itens em coluna */
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+
+.form-contato label {
+  font-weight: bold;
+}
+/* Estilização dos campos de entrada e área de texto */
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+/* Botão do formulário */
+.form-contato button {
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;/* Muda o cursor ao passar o mouse */
+  transition: background-color 0.3s ease;/* Efeito de transição */
+}
+/* Efeito de hover no botão */
+.form-contato button:hover {
+  background-color: #0056b3;
+}
+
+/* Links para outros contatos */
+.links-contato {
+  text-align: center;/* Centraliza os links */
+  margin-top: 20px;/* Espaçamento */
+}
+
+.links-contato a {
+  color: #007bff;/* Define a cor do link */
+  text-decoration: none;/* Remove o sublinhado */
+  font-weight: bold;/* Deixa o texto em negrito */
+}
+
+.links-contato a:hover {
+  text-decoration: underline;/* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilo para a seção do portfólio */
+#portfolio {
+  text-align: center;/* Centraliza o texto */
+  margin-bottom: 2em;/* Espaçamento inferior */
+}
+
+.portfolio-container {
+  display: flex;/* Alinha os itens lado a lado */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  justify-content: center; /* Centraliza os itens */
+  gap: 1em; /* Espaçamento entre os projetos */
+}
+
+.projeto {
+  background: #fff; /* Cor de fundo branca */
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 8px; /* Arredonda os cantos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Adiciona sombra */
+  padding: 1em;/* Espaçamento interno */
+  max-width: 300px; /* Largura máxima */
+  text-align: center; /* Centraliza o texto */
+}
+
+.projeto img {
+  width: 100%;/* Largura total */
+  height: auto;/* Mantém a proporção */
+  border-radius: 5px; /* Arredonda os cantos */
+  margin-bottom: 0.5em; /* Espaçamento abaixo da imagem */
+}
+
+.projeto p {
+  font-size: 0.9em; /* Define o tamanho da fonte */
+  color: #555;/* Cor do texto */
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header> 
+        <h1>PORTFÓLIO</h1>
+    </header>
+    <!-- Menu de navegação com links para diferentes seções -->
+    <nav class="menu">
+        <a href="#" data-section="home">HOME</a>
+        <a href="#" data-section="sobre">SOBRE MIM</a>
+        <a href="#" data-section="formacao">FORMAÇÃO EDUCACIONAL</a>
+        <a href="#" data-section="portfolio">PORTFÓLIO</a>
+        <a href="#" data-section="contato">CONTATO</a>
+    </nav>
+    <!-- Conteúdo principal -->
+    <main>
+        <section id="home" class="section active">
+            <h1>HOME</h1>
+             <!-- Texto introdutório para empresas sobre a importância de dar oportunidades a iniciantes -->
+            <p>
+                Muitas empresas enfrentam desafios ao preencher vagas na área de tecnologia, mas acabam hesitando em dar oportunidades para quem está começando.
+                Isso, muitas vezes, ignora algo fundamental: novos talentos trazem energia, criatividade e vontade de aprender — tudo o que é essencial em um setor tão dinâmico como a TI. Quando as empresas decidem investir em quem está iniciando, elas não só moldam profissionais alinhados aos seus valores, mas também ajudam a construir um futuro mais inovador e sustentável. Oferecer oportunidades para iniciantes é como plantar sementes que, com o tempo, vão gerar resultados incríveis. Chegou a hora de acreditar no potencial de quem está pronto para crescer.
+            </p>
+            <p>
+                Dar chances para iniciantes não é apenas uma forma de resolver demandas imediatas, mas também uma maneira de construir equipes mais diversas e inovadoras. Novos profissionais trazem novas perspectivas e abordagens modernas para resolver problemas, muitas vezes se adaptando mais rapidamente às novas tecnologias. Além disso, o aprendizado mútuo entre quem já tem experiência e quem está começando fortalece a cultura colaborativa nas empresas. Então, por que não dar o primeiro passo e investir em talentos em ascensão?
+            </p>
+            <p>E aí, vai ficar de fora ou vai abrir a porta para a galera que está começando e cheia de potencial?</p>
+        </section>
+         <!-- Seção SOBRE MIM -->
+        <section id="sobre" class="section">
+            <h1>SOBRE MIM</h1>
+             <!-- Foto e descrição pessoal -->
+            <img src="tami2.jpeg" alt="foto1" class="imagem-1"/>
+            <p>Oi, eu sou a Tamires, tenho 23 anos e sou Técnica em Química. Minha jornada acadêmica começou na Engenharia Química, mas, ao cursar uma disciplina de algoritmos, descobri uma paixão inesperada: a tecnologia. Esse momento foi um divisor de águas para mim, e decidi trocar de curso para seguir no universo da TI.</p><br>
+
+               <p> Sou apaixonada por atividade física e amante do esporte. Adoro correr ao ar livre, fazer trilhas, ir à praia e me conectar com a natureza para relaxar a mente. Um bom livro também é sempre uma ótima companhia. Tenho dois cachorros incríveis, a Belinha e o Brutus: ela é pura calmaria, enquanto ele é um pequeno furacão!</p><br>
+                
+               <p> Moro sozinha desde os 19 anos, o que me ensinou a amadurecer muito rápido e a valorizar cada momento da vida. Atualmente, estou em transição de carreira, atuando como química enquanto busco uma oportunidade no setor tecnológico. Sei que a falta de experiência inicial é um desafio, mas acredito que toda jornada começa com um passo, e estou pronta para mostrar minha determinação e vontade de aprender.</p><br>
+
+               <p> Acredito no potencial de novos talentos e na importância de oferecer chances para quem está começando. Sou dedicada, grata pela vida e movida pela vontade de aprender, crescer e contribuir com ideias inovadoras e minha energia contagiante.</p><br><br>
+                
+                <p>Se você também valoriza pessoas determinadas a fazer a diferença, vamos conversar e criar algo incrível juntos!</p>
+        </section>
+        <section id="formacao" class="section">
+            <h1>FORMAÇÃO EDUCACIONAL</h1>
+             <!-- Informações sobre trajetória acadêmica e cursos complementares -->
+            <p>Minha trajetória educacional reflete minha busca constante por aprendizado e evolução. Iniciei meus estudos superiores em Engenharia Química, curso que frequentei por quatro semestres. Durante essa jornada, tive a oportunidade de cursar uma disciplina de algoritmos, que despertou meu interesse pelo universo da tecnologia. Esse momento foi um divisor de águas na minha trajetória, levando-me a uma mudança de curso e de carreira.</p><br><br>
+            <p>Atualmente, estou cursando Análise e Desenvolvimento de Sistemas pela Uninter, uma escolha que me permite explorar minha paixão por tecnologia. Iniciei essa graduação em 2024 e tenho previsão de concluí-la em 2026. Paralelamente, também me dedico ao estudo de inglês, essencial para acompanhar a evolução do mercado global de tecnologia, e realizo esse curso na própria Uninter.</p><br><br>
+            <p>Além da formação acadêmica, estou expandindo minhas habilidades técnicas por meio de cursos complementares na plataforma Udemy. Atualmente, estudo HTML, CSS, JavaScript e Frontend, aprofundando meu conhecimento em desenvolvimento web e construindo uma base sólida para ingressar na área de tecnologia.</p><br><br>
+            <p>Reconheço que ainda não possuo experiência profissional na área de TI, mas vejo isso como uma oportunidade de mostrar minha determinação, disposição para aprender e capacidade de enfrentar novos desafios. Com dedicação e foco, estou confiante de que posso contribuir com inovação e excelência no setor.</p><br><br>
+        </section>
+         <!-- Seção PORTFÓLIO -->
+        <section id="portfolio" class="section">
+            <h2>Meu Portfólio</h2>
+            <!-- Descrição breve sobre projetos realizados -->
+            <p>Abaixo estão dois prints de sites que desenvolvi como parte dos meus estudos e prática na área de desenvolvimento web. Clique nas imagens para ampliá-las.</p>
+            <div class="portfolio-container">
+                 <!-- Projetos com links para ampliar imagens -->
+              <div class="projeto">
+                <a href="imagens/sitetecnologica.png" target="_blank">
+                  <img src="imagens/sitetecnologica.png" alt="Print do Site 1">
+                </a>
+                <p><strong>Site 1:</strong> Página inicial de um site fictício.</p>
+              </div>
+              <div class="projeto">
+                <a href="imagens/meublog.png" target="_blank">
+                  <img src="imagens/meublog.png" alt="Print do Site 2">
+                </a>
+                <p><strong>Site 2:</strong> Página de um blog fictício.</p>
+              </div>
+            </div>
+          </section>
+           <!-- Seção CONTATO -->
+        <section id="contato" class="section">
+                <h2>Entre em Contato</h2>
+                <p>Você pode entrar em contato comigo por e-mail, LinkedIn ou enviar uma mensagem diretamente pelo formulário abaixo:</p>
+              
+                <!-- Formulário de contato -->
+                 <!--  criei uma conta no formspree para tornar mais profissional o trabalho -->
+                <form action="https://formspree.io/f/mpwzbbbq" method="POST" class="form-contato">
+                  <label for="nome">Nome:</label>
+                  <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+              
+                  <label for="email">E-mail:</label>
+                  <input type="email" id="email" name="email" placeholder="Seu e-mail" required />
+              
+                  <label for="mensagem">Mensagem:</label>
+                  <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="5" required></textarea>
+              
+                  <button type="submit">Enviar</button>
+                </form>
+              
+                <!-- Links para outros contatos -->
+                <div class="links-contato">
+                  <a href="https://www.linkedin.com/in/tamires-rodrigues-peres-5a1061191/" target="_blank">LinkedIn</a> |
+                  <a href="mailto:tamiresrperes@gmail.com">E-mail</a>
+                </div>
+              </section>
+    </main>
+
+    <script>
+        // JavaScript otimizado
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Evita recarregar a página
+                const sectionId = link.dataset.section;
+
+                // Esconde todas as seções
+                document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+
+                // Mostra a seção clicada
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
